@@ -1,0 +1,17 @@
+body {
+	background-color: #00796B;
+	font-family: "roboto, sans-serif";
+	font-size: 18px;
+	text-align: center;
+}
+.class="col-sm-4{
+	font-family: "roboto, sans-serif";
+	font-size: 18px;
+	text-align: center;
+}
+
+}
+#map {
+      height: 400px;
+      width: 100%;
+}
