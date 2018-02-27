@@ -1,25 +1,39 @@
 body {
-	background-color: #00796B;
-	font-family: "roboto, sans-serif";
-	font-size: 18px;
-	text-align: center;
+    background-color: #00796B;
+    font-family: "roboto, sans-serif";
+    font-size: 18px;
+    text-align: center;
 }
-.row{
-	font-family: "roboto, sans-serif";
-	font-size: 18px;
-	text-align: center;
+
+.row {
+    font-family: "roboto, sans-serif";
+    font-size: 18px;
+    text-align: center;
 }
-button{
-	color : #00796B;
-	font-family: "roboto, sans-serif";
-	font-size: 14px;
+
+button {
+    color: #00796B;
+    font-family: "roboto, sans-serif";
+    font-size: 14px;
 }
-input{
-	width: 200px;
-	height: 25px;
-}
-#show{
+
+input {
+    width: 200px;
+    height: 25px;
+    border:none;
+	background-color:transparent;
 	color: white;
-	font-family: "roboto, sans-serif" ;
-	font-size: 18px;
+	font-size: 25px;
+	font-style: 
+}
+
+#show {
+    color: white;
+    font-family: "roboto, sans-serif";
+    font-size: 18px;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
 }
