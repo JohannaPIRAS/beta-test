@@ -9,69 +9,73 @@
 </head>
 
 <body>
-    <div class="jumbotron" style="margin-bottom:0px; color:white; background-color: #00796B;">
-        <h2 class="text-center" style="font-size: 18px;"></h2>
-    </div>
-    <div class="container">
-        <div class="row" style="margin-bottom: 20px;">
-            <h3 class="text-center text-primary"></h3>
-            <span id="error"> </span>
-        </div>
-        <div class="row form-group form-inline" id=rowDiv>
-            <script language="javascript ">
+    <div class="jumbotron> <h2 class="text-center" style="font-size: 18px;"></h2>
+          <script language="javascript ">
             today = new Date();
-            document.write(today.getDate(), "/ ", today.getMonth() + 1, "/ ", today.getFullYear(), "<br />");
-            </script>
-            <input type="text" name="city" id="city" class="form-control" placeholder="nom de la ville">
-            </br>
-            </br>
-            <button id="submitweather" class="btn btn-primary">Valider</button>
-        </div>
-        </br>
-        </br>
-        <div id="show">
-        </div>
+            document.write(today.getDate(), "/ ", today.getMonth() + 1, "/ ", today.getFullYear(), "<br />");</script>
     </div>
+    <div class="container ">
+        <div class="row " style="margin-bottom: 20px; ">
+            <h3 class="text-center text-primary "></h3>
+            <span id="error "> </span>
+        </div>
+        <div class="row form-group form-inline " id=rowDiv>
+            
+    </script>
+    <input type="text" name="city" id="city" class="form-control" placeholder="nom de la ville">
+    </br>
+    </br>
+    <button id="submitweather" class="btn btn-primary">Valider</button>
+    </div>
+    </br>
+    </br>
+    <div id="show">
+    </div>
+    </div>
+    <script type="text/javascript" src="moment-with-locales.js">
+      document.writeln("<br/>"+moment().format('MMMM Do YYYY'));
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="weather.js"></script>
 </body>
+
 </html>
-
 <!DOCTYPE html>
-            <html>
-            <head>
-                <style>
-                #map {
-                    height: 400px;
-                    width: 100%;
-                }
-                </style>
-            </head>
+<html>
 
-            <body>
-                <div id="map"></div>
-                <script>
-                function initMap() {
-                    var pamiers = { lat: 43.1148, lng: 1.608 };
-                    var map = new google.maps.Map(document.getElementById('map'), {
-                        zoom: 9,
-                        center: pamiers
-                    });
-                    var marker = new google.maps.Marker({
-                        position: pamiers,
-                        map: map
-                    });
-                }
-                </script>
-                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjILZIqFoEbyXputyy9wTwmoA4XD5Ik-M&callback=initMap">
-                </script>
-            </body>
+<head>
+    <style>
+    #map {
+        height: 400px;
+        width: 100%;
+    }
+    </style>
+</head>
 
-            </html>
-        </div>
-    </div>
-    </div>
+<body>
+    <div id="map"></div>
+    <script>
+    function initMap() {
+        var pamiers = { lat: 43.1148, lng: 1.608 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 9,
+            center: pamiers
+        });
+        var marker = new google.maps.Marker({
+            position: pamiers,
+            map: map
+        });
+    }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjILZIqFoEbyXputyy9wTwmoA4XD5Ik-M&callback=initMap">
+    </script>
+</body>
+
+</html>
+</div>
+</div>
+</div>
 </body>
 
 </html>
