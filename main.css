@@ -4,14 +4,21 @@ body {
 	font-size: 18px;
 	text-align: center;
 }
-.class="col-sm-4{
+.row{
 	font-family: "roboto, sans-serif";
 	font-size: 18px;
 	text-align: center;
 }
-
+button{
+	color : #00796B;
+	font-family: "roboto, sans-serif";
+	font-size: 14px;
+}
+input{
+	width: 200px;
+	height: 25px;
 }
 #map {
-      height: 400px;
-      width: 100%;
+      height: 200px;
+      width: 50%;
 }
