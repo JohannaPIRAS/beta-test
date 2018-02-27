@@ -18,7 +18,8 @@ input{
 	width: 200px;
 	height: 25px;
 }
-#map {
-      height: 200px;
-      width: 50%;
+#show{
+	color: white;
+	font-family: "roboto, sans-serif" ;
+	font-size: 18px;
 }
