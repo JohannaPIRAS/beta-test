@@ -26,8 +26,8 @@ $(document).ready(function() {
 
 function show(data) {
     return "<h1 style='text-align:center; font-size:50px;'> " + data.main.temp + "&deg;C</h1>" +
-        "<h4 style=';'>MaximumTemperature: " + data.main.temp_max + "&deg;C</h4>" +
-        "<h4>MinimumTemperature: " + data.main.temp_min + "&deg;C</h4>" +
+        "<h4>Max Temperature: " + data.main.temp_max + "&deg;C</h4>" +
+        "<h4>Min Temperature: " + data.main.temp_min + "&deg;C</h4>" +
         "<h4>Pression: " + data.main.pressure + "hPa</h4>" +
         "<h4>Vent: " + data.wind.speed + "m/s</h4>" +
         "<h4>Humidité: " + data.main.humidity + "%</h4>";

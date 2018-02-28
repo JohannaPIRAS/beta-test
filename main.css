@@ -1,8 +1,11 @@
-body {
+html,body {
     background-color: #00796B;
     font-family: "roboto, sans-serif";
     font-size: 18px;
     text-align: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .row {
@@ -17,14 +20,20 @@ button {
     font-size: 14px;
 }
 
-input {
+#city {
     width: 200px;
     height: 25px;
     border:none;
 	background-color:transparent;
 	color: white;
 	font-size: 25px;
-	font-style: 
+}
+
+input{
+	width: 200px;
+    height: 25px;
+	color: black;
+	font-size: 25px;
 }
 
 #show {
@@ -33,6 +42,16 @@ input {
     font-size: 18px;
 }
 
+#floating-panel {
+        top: 150px;
+        left: 25%;
+        z-index: 5;
+        padding: 5px;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+}
 #map {
     height: 400px;
     width: 100%;
