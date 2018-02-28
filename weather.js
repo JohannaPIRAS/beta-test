@@ -36,3 +36,30 @@ function show(data) {
         "<h4>Vent: " + data.wind.speed + "m/s</h4>" +
         "<h4>Humidité: " + data.main.humidity + "%</h4>";
 }
+
+function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 9,
+            center: { lat: 43.1148, lng: 1.608 }
+        });
+        var geocoder = new google.maps.Geocoder();
+
+        document.getElementById('submit').addEventListener('click', function() {
+            geocodeAddress(geocoder, map);
+        });
+    }
+
+    function geocodeAddress(geocoder, resultsMap) {
+        var address = document.getElementById('address').value;
+        geocoder.geocode({ 'address': address }, function(results, status) {
+            if (status === 'OK') {
+                resultsMap.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                    map: resultsMap,
+                    position: results[0].geometry.location
+                });
+            } else {
+                alert('Géolocalisation ne fonctionne pas pour la raison suivante: ' + status);
+            }
+        });
+    }
