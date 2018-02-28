@@ -9,10 +9,12 @@
 </head>
 
 <body>
-    <div class="jumbotron"> <h2></h2>
-          <script language="javascript ">
-            today = new Date();
-            document.write(today.getDate(), "/ ", today.getMonth() + 1, "/ ", today.getFullYear(), "<br />");</script>
+    <div class="jumbotron">
+        <h2></h2>
+        <script language="javascript ">
+        today = new Date();
+        document.write(today.getDate(), "/ ", today.getMonth() + 1, "/ ", today.getFullYear(), "<br />");
+        </script>
     </div>
     <div class="container ">
         <div class="row " style="margin-bottom: 20px; ">
@@ -26,46 +28,51 @@
             </br>
             <button id="submitweather" class="btn btn-primary">VALIDER</button>
         </div>
+        <br/>
+        <br/>
+        <div id="date"> <script type="text/javascript" src="moment-with-locales.js">
+    document.writeln("<br/>" + moment().format('MMMM Do YYYY'));
+    </script>
+        </div>
         </br>
         </br>
         <div id="show">
         </div>
     </div>
     <div id="floating-panel">
-      <input id="address" class="form-control" type="textbox" value="" placeholder="VILLE">
-      <button id="submit" class="btn btn-primary" value="Geolocaliser"> Geolocaliser </button>
+        <input id="address" class="form-control" type="textbox" value="" placeholder="VILLE">
+        <button id="submit" class="btn btn-primary" value="Geolocaliser"> Geolocaliser </button>
     </div>
     <div id="map"></div>
     <script>
-      function initMap() {
+    function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 9,
-          center: {lat: 43.1148, lng: 1.608}
+            zoom: 9,
+            center: { lat: 43.1148, lng: 1.608 }
         });
         var geocoder = new google.maps.Geocoder();
 
         document.getElementById('submit').addEventListener('click', function() {
-          geocodeAddress(geocoder, map);
+            geocodeAddress(geocoder, map);
         });
-      }
+    }
 
-      function geocodeAddress(geocoder, resultsMap) {
+    function geocodeAddress(geocoder, resultsMap) {
         var address = document.getElementById('address').value;
-        geocoder.geocode({'address': address}, function(results, status) {
-          if (status === 'OK') {
-            resultsMap.setCenter(results[0].geometry.location);
-            var marker = new google.maps.Marker({
-              map: resultsMap,
-              position: results[0].geometry.location
-            });
-          } else {
-            alert('Geocode was not successful for the following reason: ' + status);
-          }
+        geocoder.geocode({ 'address': address }, function(results, status) {
+            if (status === 'OK') {
+                resultsMap.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                    map: resultsMap,
+                    position: results[0].geometry.location
+                });
+            } else {
+                alert('Geocode was not successful for the following reason: ' + status);
+            }
         });
-      }
-      </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjILZIqFoEbyXputyy9wTwmoA4XD5Ik-M&callback=initMap">
+    }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjILZIqFoEbyXputyy9wTwmoA4XD5Ik-M&callback=initMap">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

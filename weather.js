@@ -1,3 +1,7 @@
+moment.locale("fr");
+$("#date").text(moment().format('LL'));
+
+
 $(document).ready(function() {
     $('#submitweather').click(function() {
         var city = $("#city").val();

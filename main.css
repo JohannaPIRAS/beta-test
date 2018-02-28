@@ -36,6 +36,12 @@ input{
 	font-size: 25px;
 }
 
+#date {
+	color: white;
+    font-family: "roboto, sans-serif";
+    font-size: 18px;
+}
+
 #show {
     color: white;
     font-family: "roboto, sans-serif";
