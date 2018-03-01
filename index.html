@@ -10,16 +10,12 @@
 
 <body>
     <div class="jumbotron">
-        <h2></h2>
-        <script language="javascript ">
-        today = new Date();
-        document.write(today.getDate(), "/ ", today.getMonth() + 1, "/ ", today.getFullYear(), "<br />");
-        </script>
+        
     </div>
     <div class="container ">
         <div class="row " style="margin-bottom: 20px; ">
             <h3 class="text-center text-primary "></h3>
-            <span id="error "> </span>
+            <span id="error"> </span>
         </div>
         <div class="row form-group form-inline " id=rowDiv>
             </script>
@@ -30,23 +26,24 @@
         </div>
         <br/>
         <br/>
-        <div id="date"> <script type="text/javascript" src="moment-with-locales.js">
-    document.writeln("<br/>" + moment().format('MMMM Do YYYY'));
-    </script>
+        <div id="date">
+            <script type="text/javascript" src="moment-with-locales.js">
+            document.writeln("<br/>" + moment().format('MMMM Do YYYY'));
+            </script>
         </div>
         </br>
+        <div id="tempactu"></div>
         </br>
-        <div id="show">
-        </div>
+        <div id="show"></div>
     </div>
+    <div id="coordo"></div>
     <div id="floating-panel">
         <input id="address" class="form-control" type="textbox" value="" placeholder="VILLE">
         <button id="submit" class="btn btn-primary" value="Geolocaliser"> Geolocaliser </button>
     </div>
-    <div ></div>
+    <div></div>
     <div id="map"></div>
     <div id="initMap"></div>
-
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjILZIqFoEbyXputyy9wTwmoA4XD5Ik-M&callback=initMap">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>

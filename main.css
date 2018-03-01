@@ -41,11 +41,24 @@ input{
     font-family: "roboto, sans-serif";
     font-size: 18px;
 }
+#tempactu {
+	color: white;
+    font-family: "roboto, sans-serif";
+    font-size: 40px;
+
+}
 
 #show {
     color: white;
     font-family: "roboto, sans-serif";
     font-size: 18px;
+}
+
+#coordo {
+	color: white;
+    font-family: "roboto, sans-serif";
+    font-size: 10px;
+    text-align: left;
 }
 
 #floating-panel {
