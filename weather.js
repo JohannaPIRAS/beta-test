@@ -8,7 +8,7 @@ $(document).ready(function() {
         if (city != '') {
             $.ajax({
 
-                url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + "&APPID=248a8f723196ff7ffb7e6415ac07d252",
+                url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + "&APPID=248a8f723196ff7ffb7e6415ac07d252",
                 type: "GET",
                 dataType: "jsonp",
                 success: function(data) {
@@ -39,7 +39,7 @@ function show(data) {
     return "<h4>Max Temperature: " + data.main.temp_max + "&deg;C</h4>" +
         "<h4>Min Temperature: " + data.main.temp_min + "&deg;C</h4>" +
         "<h4>Pression: " + data.main.pressure + "hPa</h4>" +
-        "<h4>Vent: " + data.wind.speed + "m/s</h4>" +
+        "<h4>Vent: " + data.wind.speed + "km/h</h4>" +
         "<h4>Humidité: " + data.main.humidity + "%</h4>";
 }
 
