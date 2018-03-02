@@ -9,7 +9,7 @@ $(document).ready(function() {
             $.ajax({
 
                 url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + "&APPID=248a8f723196ff7ffb7e6415ac07d252",
-                type: "GET",
+                type: "POST",
                 dataType: "jsonp",
                 success: function(data) {
                     var temperature = tempactu(data);
